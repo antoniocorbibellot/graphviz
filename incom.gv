@@ -37,22 +37,20 @@ subgraph cluster_staffdireccion {
         fontname = "ubuntu mono" shape = record
         label="{Staff ISO 9001 y 14001 | Staff proyectos estrategicos | <f0>Staff juridico | Staff de PRL y Medio Ambiente}"
         ];
-}
+    }
 
-subgraph cluster_n1 {
-	node [shape=box style=filled fillcolor="red4" fontcolor=white];
-	style=invis;    
-	
-	n1a [label="Director de Admin. y Finanzas"];
-	n1b [label="Director Operaciones"]	
-	n1c [label="Director de Filiales"];
-	n1d [label="Director Comercial"]	
+    subgraph cluster_n1 {
+	    node [shape=box style=filled fillcolor="red4" fontcolor=white];
+	    style=invis;    
+	    
+	    n1a [label="Director de Admin. y Finanzas"];
+	    n1b [label="Director Operaciones"]	
+	    n1c [label="Director de Filiales"];
+	    n1d [label="Director Comercial"]	
 
-	adjunto -- n1a;
-	adjunto -- n1b;
-	adjunto -- n1c;
-	adjunto -- n1d;
-}
-
-
+	    adjunto -- n1a;
+	    adjunto -- n1b;
+	    adjunto -- n1c;
+	    adjunto -- n1d;
+    }
 }
