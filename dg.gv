@@ -1,0 +1,19 @@
+digraph G {
+
+rankdir=LR; /* graph from left to right */
+splines=ortho; /* arrows are straight and w 90 deg angles */
+node [shape=box style=rounded fontsize=14 width=1.5 height=1 fixedsize=true font=ubuntu]
+
+subgraph cluster1
+{
+a [label="Input"]
+b [label="Do Stuff"]
+a -> b
+{
+rank = same;
+out [label="Output"]
+out -> a [style=dotted shape=none arrowhead=none]
+}
+b -> out [tailport=s headport=e color=blue constraint=false]
+}
+}

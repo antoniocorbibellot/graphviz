@@ -1,0 +1,58 @@
+
+// Organigrama pra InCom
+
+graph incom {
+
+// Top Bottom
+rankdir = TB;
+splines = ortho;
+
+//node [shape=box style=rounded fontsize=9 /*width=1.5 height=1 fixedsize=true*/ font=ubuntu]
+
+subgraph cluster_directores {
+	node [shape=box];
+	style=invis;
+	//splines=ortho; /* arrows are straight and w 90 deg angles */
+	general [label="Director General" style=filled fillcolor=black fontcolor=green];
+	adjunto [label="Director Adjunto" style=filled fillcolor=black fontcolor=yellow]	
+	general -- staffdir;
+	staffdir -- adjunto;
+	staffdir [label="", margin=0, height=0, width=0, shape=box];
+	{
+        rank = same;
+        //rankdir = LR;
+        
+        staffdir -- sd;
+    }
+}
+
+subgraph cluster_staffdireccion {
+	//node [shape=none margin=0];
+	style=invis;
+	
+ 	//rankdir=TB;
+	
+	sd [
+        style = "filled, bold" penwidth = 1 fillcolor = lightblue
+        fontname = "ubuntu mono" shape = record
+        label="{Staff ISO 9001 y 14001 | Staff proyectos estrategicos | <f0>Staff juridico | Staff de PRL y Medio Ambiente}"
+        ];
+}
+
+subgraph cluster_n1 {
+	node [shape=box style=filled fillcolor="red4" fontcolor=white];
+	style=invis;    
+	
+	n1a [label="Director de Admin. y Finanzas"];
+	n1b [label="Director Operaciones"]	
+	n1c [label="Director de Filiales"];
+	n1d [label="Director Comercial"]	
+
+	adjunto -- n1a;
+	adjunto -- n1b;
+	adjunto -- n1c;
+	adjunto -- n1d;
+}
+
+
+}
