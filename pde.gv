@@ -1,0 +1,6 @@
+digraph pde {
+    ge [margin=0 fontcolor=blue fontsize=18 width=0.5 shape="box3d" style=filled label="Generador de Eventos"];
+    ce [label="Cola de Eventos"];
+    ge -> ce;
+    
+}
