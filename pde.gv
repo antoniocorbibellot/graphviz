@@ -1,6 +1,9 @@
 digraph pde {
-    ge [margin=0 fontcolor=blue fontsize=18 width=0.5 shape="box3d" style=filled label="Generador de Eventos"];
-    ce [label="Cola de Eventos"];
+    ge [margin=0 width=1
+          fontcolor=gray90 fontsize=12
+          shape="rectangle" style=filled fillcolor=gray33
+          label="Generador de Eventos"];
+    ce [label="Cola de Eventos", style=filled fillcolor=blue color=red fontcolor=white];
     ge -> ce;
     
 }
