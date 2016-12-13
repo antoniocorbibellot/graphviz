@@ -3,6 +3,8 @@ digraph pde
     ///////////
     // Nodos //
     ///////////
+    bgcolor=transparent;
+    //bgcolor=gray90;
     // Event Generator
     ge [margin = "0" width = "1"
         fontcolor = "black" fontsize = "12"
