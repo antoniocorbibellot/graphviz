@@ -1,0 +1,53 @@
+digraph G {
+    labelloc=t;
+    label="BAS Information Technology Course Sequence";
+    
+    rankdir=LR;
+    subgraph cluster0 {
+        node [style=filled,color=white];
+        style=filled;
+        color=lightgrey;
+        prog2[label="2nd semester\nof programming"];
+        prog1[label="1st semester\nof programming"];
+        prog1 -> prog2;
+        label = "For students with no programming experience";
+    }
+    
+    node[style=filled, colorscheme=blues3, color=2];
+    
+    cnt3504[label="CNT3504: Networking"];
+    cen4341[label="CEN4341: Platform Technologies"];
+    cnt3702[label="CNT3702: Infrastructure\n& Facilities Planning"];
+    cop3847[label="COP3847: Web Systems and Tech."];
+    cop3703[label="COP3703: Database Concepts"];
+    cis3510[label="CIS3510: Project Management"];
+    cnt3604[label="CNT3604: Systems Administration\n& Maintenance"];
+    cis4361[label="CIS4361: Information Assurance and Security"];
+    cen4722[label="CEN4722: Human Computer Interaction"];
+    cop4858[label="COP4858: Integrative Programming"];
+    cis4596[label="CIS4596: IT Capstone"];
+    cda4411[label="CDA4411: Systems Integration & Architecture"];
+    cis4253[label="CIS4253: Social & Professional Issues in IT"];
+    
+    { rank="same"; cis4253; cda4411; cnt3604; cnt3504; cis3510; cen4722; }
+    
+    prog1 -> cnt3504;
+    prog2 -> cop4858;
+    prog2 -> cop3847;
+    prog2 -> cop3703;
+    prog2 -> cen4722;
+    
+    cnt3504 -> cen4341;
+    cnt3504 -> cnt3702;
+    cnt3504->cis4361;
+    cnt3504 -> cis4596;
+    
+    cop3703-> cop3847;
+    cop3703->cis4596;
+    
+    cop3847->cis4596;
+    cis3510->cis4596;
+    cis4361->cis4596;
+    cen4722->cis4596;
+    cop4858->cis4596;
+}
